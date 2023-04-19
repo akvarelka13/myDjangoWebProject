@@ -1,0 +1,32 @@
+﻿{% extends "app/layout.html" %}
+
+{% block content %}
+{% load static %}
+<h2>{{ title }}.</h2>
+<h3>{{ message }}</h3>
+<div class="jumbotron">
+    <h1>Лучшие курорты Испании</h1>
+    <p class="lead">Мы собрали на этой странице наши лучшие туры в Испанию в 2023 году. Спешите выбрать оптимальное предложение поездки в Испанию по самым низким ценам.</p>
+    <p><a href="https://blog.ostrovok.ru/kurorty-ispanii/" target="_blank"> <img width="1000" height="610" src="{% static 'app/content/испания.jpg' %}" alt="Logo 1" /></a></p>
+</div>
+<div class="jumbotron">
+    <h1>Лучшие курорты Бали</h1>
+    <p class="lead">Отдых на Бали. Словно магнит, притягивает к себе Бали путешественников со всего мира — романтиков и влюбленных, семейных пар и одиноких туристов.</p>
+    <a href="https://vc.ru/migrate/623438-10-luchshih-mest-dlya-poseshcheniya-na-bali" target="_blank"> <img width="1000" height="610" src="{% static 'app/content/бали.jpeg' %}" alt="Logo 2" /></a>
+</div>
+<div class="jumbotron">
+    <h1>Лучшие курорты Таиланда</h1>
+    <p class="lead">Когда в Москве снег, на тайских пляжах палящее солнце. А ещё Тай — страна для перезагрузки, где можно и загореть, и познать дзен. Что там такого в этом Таиланде. Два моря: Андаманское и Южно-Китайское (точнее, его Сиамский залив). Остров Пхукет в Андаманском, остров Самуи — в Сиамском заливе, на берегах залива — Бангкок и Паттайя. </p>
+        <a href="https://howtrip.ru/10-luchshikh-mest-dlya-otdykha-v-taylande/" target="_blank"> <img width="1000" height="610" src="{% static 'app/content/таиланд.jpg' %}" alt="Logo 3" /></a>
+</div>
+<div class="jumbotron">
+    <h1>Лучшие курорты Шри-Ланки</h1>
+    <p class="lead">Шри-Ланка — остров, куда едут отдыхать круглый год. Пляжный отдых, купание в Индийском океане, поездки по экзотическим местам, полное расслабление, встречи, запоминающиеся навсегда, аутентичная жизнь деревень, вековые традиции — так или иначе именно этого ждут от острова. </p>
+        <a href="https://make-trip.ru/sri-lanka/luchshie-kurorty-gde-otdykhat" target="_blank"> <img width="1000" height="610" src="{% static 'app/content/шриланка.jpg' %}" alt="Logo 4" /></a>
+</div>
+<div class="jumbotron">
+    <h1>Лучшие курорты Мальдивских островов</h1>
+    <p class="lead">Рассказываем, где лучше отдыхать на Мальдивах. Какие там есть острова и сколько стоит жилье. Как организовать перелет на Мальдивы и как перемещаться между островами. Цены на продукты и еду в ресторанах. Что из сувениров привезти домой.</p>
+        <a href="https://travelest.ru/luchshie-kurorty-na-maldivskikh-ostrovakh" target="_blank"> <img width="1000" height="610" src="{% static 'app/content/мальдивы.jpg' %}" alt="Logo 5" /></a>
+</div>
+        {% endblock %}

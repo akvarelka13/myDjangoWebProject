@@ -1,0 +1,20 @@
+﻿{% extends "app/layout.html" %}
+
+{% block content %}
+
+<h2>{{ title }}.</h2>
+<h3>{{ message }}</h3>
+
+<address>
+    БарселонаТревел<br />
+    Москва, Туристская ул. 5<br />
+    <abbr title="Телефон">Телефон:</abbr>
+    +7(495)158-11-11
+</address>
+
+<address>
+    <strong>Техническая поддержка:</strong>   <a href="mailto:Support@example.com">info@barselonatrevel.ru</a><br />
+    <strong>Отдел маркетинга:</strong> <a href="mailto:Marketing@example.com">Marketing@barselonatrevel.ru</a>
+</address>
+
+{% endblock %}

@@ -1,0 +1,75 @@
+﻿    {% extends "app/layout.html" %}
+    {% block content %}
+    {% if form != None %}
+    <br>
+    <h2>Пожалуйста, оставьте свой отзыв</h2>
+    <br>
+    <div>
+        <form method="post">
+            {% csrf_token %}
+            <label for="{{form.name.id_for_label}}">{{form.name.label}}:</label>
+            {{form.name}}<br><br>
+            <label for="{{form.email.id_for_label}}">{{form.email.label}}:</label>
+            {{form.email}}<br><br>
+            <label for="{{form.gender.id_for_label}}">{{form.gender.label}}:</label>
+            {{form.gender}}<br><br>
+            <label for="{{form.message.id_for_label}}">{{form.message.label}}:</label>
+            {{form.message}}<br><br>
+            <label for="{{form.recommendation.id_for_label}}">{{form.recommendation.label}}:</label>
+            {{form.recommendation}}<br><br>
+            <label for="{{form.notice.id_for_label}}">{{form.notice.label}}:</label>
+            {{form.notice}}<br><br>
+            <input type="submit" value="Отправить" id="one">
+            <script>
+                function one_click() {
+                    $('#one').css('color', '#f43a09');
+                }
+                $('#one').click(one_click);
+                function one_mouseover() {
+                    $('#one').css('background-color', '#ffb766');
+                }
+                $('#one').mouseover(one_mouseover);
+                function one_mouseout() {
+                    $('#one').css('background-color', 'white');
+                }
+                $('#one').mouseout(one_mouseout);
+
+
+                $('#id_name').focus(name_focus);
+                function name_focus() {
+                    $('#id_name').css('background-color', '#ffb766');
+                }
+                $('#id_name').blur(name_blur);
+                function name_blur() {
+                    $('#id_name').css('background-color', 'white');
+                }
+
+                $('#id_email').focus(email_focus);
+                function email_focus() {
+                    $('#id_email').css('background-color', '#ffb766');
+                }
+                $('#id_email').blur(email_blur);
+                function email_blur() {
+                    $('#id_email').css('background-color', 'white');
+                }
+
+
+       
+            </script>
+        </form>
+    </div>
+    {% else %}
+    <br>
+    <h3>Благодарим за ваш отзыв!</h3>
+    <br>
+    <h4>Вы сообщили о себе следующее:</h4>
+    <ul>
+        <li><span>Имя:</span> {{data.name}}</li>
+        <li><span>E-mail:</span> {{data.email}}</li>
+        <li><span>Ваш пол:</span> {{data.gender}}</li>
+        <li><span>Ваш отзыв:</span> {{data.message}}</li>
+        <li><span>Ваши рекомендации:</span> {{data.recommendation}}</li>
+        <li><span>Получать новоти и предложения на e-mail:</span> {{data.notice}}</li>
+    </ul>
+    {% endif %}
+    {% endblock %}
